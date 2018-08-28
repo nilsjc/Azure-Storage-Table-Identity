@@ -1,7 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Threading.Tasks;
 using Microsoft.WindowsAzure.Storage;
 using Microsoft.WindowsAzure.Storage.Table;
 
@@ -11,6 +8,7 @@ namespace AzureStorageTableIdentity
     {
         private readonly CloudTable _table;
         private readonly string _identityPartitionKey;
+
         public SiteUserAccess(string connectionString, string tableName, string identityPartitionKey)
         {
             var storageAccount = CloudStorageAccount.Parse(connectionString);
